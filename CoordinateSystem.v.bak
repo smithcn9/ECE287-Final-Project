@@ -1,18 +1,18 @@
 module CoordinateSystem(
 	input clk, //Clock signal
 	input rst, //Reset signal
-	output reg [10:0] x, //X coordinate
-	output reg [10:0] y // Y coordinate
+	output reg [9:0] x, //X coordinate (10 bits to represent 0-799)
+	output reg [9:0] y // Y coordinate (10 bits to represent 0-599)
 );
 
-//Resolution constants
+//Resolution constants to keep organized
 
-parameter xMax = 1056;
-parameter yMax = 628;
+localparam xMax = 800;
+localparam yMax = 600;
 
 //counters
-reg [10:0] xCount = 0;
-reg [10:0] yCount = 0;
+reg [9:0] xCount = 0;
+reg [9:0] yCount = 0;
 
 //Update the counters based on the clock
 always @(posedge clk) begin

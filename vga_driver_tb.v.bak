@@ -1,0 +1,66 @@
+`timescale 1ns / 1ps
+
+module vga_driver_tb;
+
+    // Inputs
+    reg clk;
+    reg rst;
+    reg [7:0] red;
+    reg [7:0] green;
+    reg [7:0] blue;
+
+    // Outputs
+    wire vga_h_sync;
+    wire vga_v_sync;
+    wire [7:0] vga_red;
+    wire [7:0] vga_green;
+    wire [7:0] vga_blue;
+
+    // Instantiate the Unit Under Test (UUT)
+    vga_driver uut (
+        .clk(clk), 
+        .rst(rst), 
+        .red(red), 
+        .green(green), 
+        .blue(blue), 
+        .vga_h_sync(vga_h_sync),
+        .vga_v_sync(vga_v_sync),
+        .vga_red(vga_red),
+        .vga_green(vga_green),
+        .vga_blue(vga_blue)
+    );
+
+    // Clock Generation
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk; // 50MHz clock
+    end
+
+    // Test Stimulus
+    initial begin
+        // Initialize Inputs
+        rst = 1;
+        red = 0;
+        green = 0;
+        blue = 0;
+
+        // Wait 100 ns for global reset
+        #100;
+        
+        // Release reset
+        rst = 0;
+
+        // Apply some test patterns
+        #100;
+        red = 8'hff; green = 8'h00; blue = 8'h00; // Red
+        #100;
+        red = 8'h00; green = 8'hff; blue = 8'h00; // Green
+        #100;
+        red = 8'h00; green = 8'h00; blue = 8'hff; // Blue
+        #100;
+
+        // Complete the simulation
+        $finish;
+    end
+      
+endmodule

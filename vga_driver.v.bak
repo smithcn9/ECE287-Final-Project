@@ -1,0 +1,60 @@
+module vga_driver(
+    input clk,
+    input rst,
+    // RGB inputs from the image generation module
+    input [7:0] red,
+    input [7:0] green,
+    input [7:0] blue,
+    // VGA output signals
+    output vga_h_sync,
+    output vga_v_sync,
+    output [7:0] vga_red,
+    output [7:0] vga_green,
+    output [7:0] vga_blue
+);
+
+    // Instantiate the CoordinateSystem
+    wire [9:0] xCoord, yCoord;
+    CoordinateSystem coordSys(
+        .clk(clk),
+        .rst(rst),
+        .x(xCoord),
+        .y(yCoord)
+    );
+
+	// horizontal timings, adjusted for 800x600 @ 60Hz
+	
+	parameter HA_END = 10'd799;           // end of active pixels
+	parameter HS_STA = HA_END + 40;       // sync starts after front porch
+	parameter HS_END = HS_STA + 128;      // sync ends
+	parameter WIDTH  = 10'd1055;          // last pixel on line (after back porch)
+
+	// vertical timings for 800x600
+	parameter VA_END = 10'd599;           // end of active pixels
+	parameter VS_STA = VA_END + 1;        // sync starts after front porch
+	parameter VS_END = VS_STA + 4;        // sync ends
+	parameter HEIGHT = 10'd627;           // last line on screen (after back porch)
+
+	
+	
+
+    // Replace or modify existing pixel position logic with coordinates from CoordinateSystem
+    // Remove or comment out the existing xPixel and yPixel logic if it's now redundant
+
+    always @(posedge clk) begin
+        if (rst) begin
+            // ... reset logic ...
+        end else begin
+            // ... other existing logic ...
+
+            // Use xCoord and yCoord for display logic
+            // Example: Determine if the current pixel is within the active display area
+            active_pixels = (xCoord < HA_END) && (yCoord < VA_END);
+
+            // ... additional logic for graphics or processing ...
+        end
+    end
+
+    // ... rest of your module logic ...
+
+endmodule

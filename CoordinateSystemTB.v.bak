@@ -32,7 +32,7 @@ module CoordinateSystemTB;
     	rst = 0;   	// Deassert reset
 
     	// Wait long enough to observe behavior
-    	#1000000;   	// Wait for 200,000ns (200us), adjust as needed
+    	#10000000;   	// Wait for 200,000ns (200us), adjust as needed
 
     	// End simulation
     	$stop;
