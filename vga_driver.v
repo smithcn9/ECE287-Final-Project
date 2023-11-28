@@ -1,6 +1,9 @@
 module vga_driver(
     input clk,
     input rst,
+	 //inputs passed from coordinate system
+	 input [10:0] xCoord,
+    input [10:0] yCoord,
     // RGB inputs from the image generation module
     input [7:0] red,
     input [7:0] green,
@@ -13,14 +16,6 @@ module vga_driver(
     output reg [7:0] vga_blue
 );
 
-    // Instantiate the CoordinateSystem
-    wire [10:0] xCoord, yCoord;
-    CoordinateSystem coordSys(
-        .clk(clk),
-        .rst(rst),
-        .x(xCoord),
-        .y(yCoord)
-    );
 
 	// horizontal timings, adjusted for 800x600 @ 60Hz
 	
