@@ -1,7 +1,7 @@
 # VGA Image Generation Project
 
 ## High-Level Description
-This project showcases the development of a Verilog-based system for generating and displaying images on a VGA monitor using the DE2-115 board. It involves two primary modules: `image_generator.v` and `VGA_gen.v`. The `image_generator.v` module is designed to create a dynamic radial gradient image, where users can interactively modify the RGB signals using input switches on the DE2-115 board. Meanwhile, `VGA_gen.v` manages the VGA signal generation and synchronization.
+This project showcases the development of a Verilog-based system for generating and displaying images on a VGA monitor using the DE2-115 board. It involves two primary modules: `image_generator.v` and `VGA_gen.v`. The `image_generator.v` module is designed to create a radial gradient image, where users can interactively modify the RGB signals using input switches on the DE2-115 board. Meanwhile, `VGA_gen.v` manages the VGA signal generation and synchronization.
 
 ## Background Information
 VGA (Video Graphics Array) is a standard technology for computer monitor image display. This project delves into the application of Verilog, a hardware description language, for controlling VGA signals in a precise manner, specifically utilizing the capabilities of the DE2-115 board. It's an insightful journey into digital design and computer engineering, demonstrating how hardware programming can be used to manipulate image displays.
