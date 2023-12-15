@@ -22,7 +22,7 @@ This project exemplifies the practical application of Verilog in digital image p
 - https://youtu.be/bxhqV72B3H4
 
 ## Citations and Acknowledgements
-- The VGA signal generation module is based on a design by Peter Jamieson, providing a solid basis for this innovative project.
+- The VGA signal generation module is based on a design by Peter Jamieson, providing a solid basis for this project.
 
 ## Contributors
 - Carter Smith
