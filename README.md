@@ -1,27 +1,27 @@
 # VGA Image Generation Project
 
 ## High-Level Description
-This project is centered around developing a Verilog-based system to generate and display images on a VGA monitor. It primarily utilizes two modules: `image_generator.v` and `VGA_gen.v`. The `image_generator.v` module creates a dynamic radial gradient image, where users can modify the RGB signals using input switches, offering an interactive experience in image generation. The `VGA_gen.v` module, on the other hand, is dedicated to the generation and synchronization of VGA signals for the display.
+This project showcases the development of a Verilog-based system for generating and displaying images on a VGA monitor using the DE2-115 board. It involves two primary modules: `image_generator.v` and `VGA_gen.v`. The `image_generator.v` module is designed to create a dynamic radial gradient image, where users can interactively modify the RGB signals using input switches on the DE2-115 board. Meanwhile, `VGA_gen.v` manages the VGA signal generation and synchronization.
 
 ## Background Information
-VGA (Video Graphics Array) is a widely recognized standard for image display on computer monitors. In this project, we dive into the application of Verilog, a hardware description language, to intricately control VGA signals. This venture is a deep dive into digital design and computer engineering, showcasing the manipulation of image display through hardware programming.
+VGA (Video Graphics Array) is a standard technology for computer monitor image display. This project delves into the application of Verilog, a hardware description language, for controlling VGA signals in a precise manner, specifically utilizing the capabilities of the DE2-115 board. It's an insightful journey into digital design and computer engineering, demonstrating how hardware programming can be used to manipulate image displays.
 
 ## Design Description
-- **image_generator.v**: This module is the heart of the image generation process. It produces a radial gradient whose colors can be dynamically altered via input switches. The module outputs VGA-compatible RGB signals, orchestrating the core logic behind the image generation.
-- **VGA_gen.v**: Inspired by a design from Peter Jamieson, this module expertly generates the necessary VGA signals. It is responsible for the precise synchronization required for seamless image display on VGA monitors.
+- **image_generator.v**: Central to the image generation process, this module outputs a radial gradient, the colors of which can be dynamically changed using input switches on the DE2-115 board. It generates VGA-compatible RGB signals and dictates the primary logic for image creation.
+- **VGA_gen.v**: Adapted from Peter Jamieson's design, this module is responsible for generating accurate VGA signals for image display on a monitor, ensuring proper synchronization.
 
 ## Results and Metrics
-- The system successfully demonstrates the capability to generate a customizable radial gradient and display it on a VGA monitor. The interactive nature of using switches to alter the image in real-time exemplifies the project's success in combining hardware programming with visual outputs.
+- The project is successful in dynamically generating and displaying a customizable radial gradient on a VGA monitor. The use of switches on the DE2-115 board to interactively alter the image illustrates the effective integration of hardware programming with visual output.
 
 ## Conclusion
-This project is a testament to the practical applications of Verilog in the realm of digital image processing and VGA signal manipulation. It not only provides insights into the fundamental aspects of VGA technology but also opens avenues for creative exploration in hardware-based image generation.
+This project exemplifies the practical application of Verilog in digital image processing and VGA signal manipulation, particularly highlighting the capabilities of the DE2-115 board. It serves as a foundational exploration into VGA technology and opens new possibilities for hardware-based image generation and interaction.
 
 ## Media and Demonstrations
-- [Include links or embed images/videos demonstrating the system in action]
-- [Add a link to a YouTube demo showcasing the project's functionality]
+- [Include links or embed images/videos demonstrating the system, particularly showcasing the use of the DE2-115 board in action]
+- [Add a link to a YouTube demo highlighting the project's features and the interactive aspect of using the DE2-115 board]
 
 ## Citations and Acknowledgements
-- The VGA signal generation module is adapted from a design by Peter Jamieson, offering a robust foundation for this project.
+- The VGA signal generation module is based on a design by Peter Jamieson, providing a solid basis for this innovative project.
 
 ## Contributors
 - Carter Smith
