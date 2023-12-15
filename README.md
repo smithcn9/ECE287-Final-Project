@@ -19,7 +19,7 @@ This project exemplifies the practical application of Verilog in digital image p
 ## Media and Demonstrations
 - ![de2115](https://github.com/smithcn9/ECE287FinalProject/assets/150873409/d3cd949b-5953-4fcf-b4cc-dde2b7dd8087)
 
-- [Add a link to a YouTube demo highlighting the project's features and the interactive aspect of using the DE2-115 board]
+- https://youtu.be/bxhqV72B3H4
 
 ## Citations and Acknowledgements
 - The VGA signal generation module is based on a design by Peter Jamieson, providing a solid basis for this innovative project.
