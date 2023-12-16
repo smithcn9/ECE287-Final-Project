@@ -11,7 +11,7 @@ VGA (Video Graphics Array) is a standard technology for computer monitor image d
 - **VGA_gen.v**: Adapted from Peter Jamieson's design, this module is responsible for generating accurate VGA signals for image display on a monitor, ensuring proper synchronization.
 
 ## Complexity of the Design
-The complexity of this design lies in its ability to intricately control the VGA signal generation process and effectively manage the image rendering on the VGA monitor. The implementation requires a deep understanding of digital signal processing, timing constraints, and the integration of hardware inputs (switches) for real-time interaction. Managing the synchronization of RGB signals to produce a coherent image, especially one that can be interactively altered, showcases the sophisticated nature of the project. This complexity not only reflects the technical skill required but also the innovative approach to hardware-based image generation.
+The complexity of this design lies in its ability to control the VGA signal generation process and effectively manage the image rendering on the VGA monitor. The implementation requires a deep understanding of digital signal processing, timing constraints, and the integration of hardware inputs (switches) for real-time interaction. Managing the synchronization of RGB signals to produce an image, especially one that can be altered by user inputs, showcases the sophisticated nature of the project.
 
 ## Results and Metrics
 - The project is successful in dynamically generating and displaying a customizable radial gradient on a VGA monitor. The use of switches on the DE2-115 board to interactively alter the image illustrates the effective integration of hardware programming with visual output.
